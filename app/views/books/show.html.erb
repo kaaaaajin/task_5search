@@ -39,6 +39,8 @@
           <% if book_comment.user == current_user %>
             <%= link_to "Destroy", book_book_comment_path(@book, book_comment), method: :delete, class: "btn btn-danger pull-right" %>
           <% end %>
+          <!--URLには本のidとコメントのidが必要→1人のユーザが１つの投稿に対して何度でもコメントできる」という仕様だったため、-->
+          <!--destroyをする際にidを受け渡して「どのコメントを削除するのか」を指定する必要-->
         </td>
       </tr>
       <% end %>
